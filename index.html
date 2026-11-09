@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="千葉県松戸市の中古車販売 t-zest。中古車のご購入、お乗り換え、下取りについてお気軽にご相談ください。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#202a33">
+  <title>中古車販売 t-zest｜千葉県松戸市</title>
+  <style>
+    :root {
+      --ink: #202a33;
+      --muted: #68737c;
+      --line: #e5e9ec;
+      --paper: #fff;
+      --soft: #f5f7f8;
+      --green: #06c755;
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+        "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.8; letter-spacing: .025em;
+    }
+    a { color: inherit; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    header { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); }
+    .head { min-height: 88px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:13px; text-decoration:none; }
+    .brand img { width:48px; height:48px; object-fit:contain; }
+    .brand-name { font-size:27px; font-weight:750; letter-spacing:.06em; line-height:1.15; }
+    .brand-sub { color:var(--muted); font-size:10px; letter-spacing:.18em; }
+    nav { display:flex; gap:26px; font-size:13px; color:#46515a; }
+    nav a { text-decoration:none; }
+    nav a:hover { opacity:.65; }
+    .hero { position:relative; min-height:440px; display:grid; align-items:center; overflow:hidden; background:#26323b; }
+    .hero::before {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(90deg, rgba(17,27,35,.82), rgba(17,27,35,.40) 55%, rgba(17,27,35,.12)),
+        url("assets/hero.jpg") center 53% / cover no-repeat;
+      transform:scale(1.01);
+    }
+    .hero-content { position:relative; color:#fff; padding-block:78px; }
+    .eyebrow { font-size:11px; letter-spacing:.22em; color:#d5dde2; margin:0 0 14px; }
+    h1 { margin:0; font-size:clamp(34px,5vw,58px); line-height:1.28; letter-spacing:.04em; font-weight:650; }
+    .hero p { margin:18px 0 0; color:#e8edf0; font-size:15px; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:11px 22px; border-radius:3px; text-decoration:none; font-weight:650; font-size:14px; transition:.2s; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn-light { background:#fff; color:var(--ink); }
+    .btn-line { background:var(--green); color:#fff; }
+    section { padding:76px 0; }
+    .section-label { color:#7b858d; font-size:11px; letter-spacing:.2em; font-weight:700; margin:0 0 7px; }
+    h2 { font-size:clamp(25px,3vw,34px); line-height:1.35; margin:0 0 25px; font-weight:650; }
+    .intro { max-width:760px; color:#4f5a62; font-size:16px; }
+    .services { background:var(--soft); }
+    .service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:30px; }
+    .service { background:#fff; border:1px solid var(--line); padding:25px 23px; min-height:150px; }
+    .service-no { color:#9aa3aa; font-size:11px; letter-spacing:.15em; }
+    .service h3 { margin:10px 0 5px; font-size:18px; }
+    .service p { margin:0; color:var(--muted); font-size:13px; }
+    .info-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; }
+    .info-table { width:100%; border-collapse:collapse; font-size:14px; }
+    .info-table th,.info-table td { text-align:left; vertical-align:top; padding:14px 12px; border-bottom:1px solid var(--line); }
+    .info-table th { width:34%; color:#6c7780; font-weight:600; }
+    .contact { background:#202a33; color:#fff; }
+    .contact .section-label { color:#b8c2c9; }
+    .contact-intro { color:#d6dde2; margin-top:-10px; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:30px; }
+    .contact-card { background:#fff; color:var(--ink); padding:26px; display:flex; flex-direction:column; justify-content:space-between; min-height:210px; }
+    .contact-card.line-card { border-top:4px solid var(--green); }
+    .contact-title { font-size:13px; color:#68737c; margin:0 0 8px; }
+    .phone { font-size:clamp(25px,3vw,34px); font-weight:750; letter-spacing:.02em; text-decoration:none; }
+    .small { font-size:12px; color:#78828a; }
+    .line-row { display:flex; align-items:center; gap:18px; }
+    .line-row img { width:116px; height:116px; object-fit:contain; }
+    .line-link { color:#079b43; font-weight:700; text-decoration:none; }
+    .contact-email { color:#dfe5e9; margin-top:24px; font-size:14px; }
+    .contact-email a { color:#fff; }
+    footer { background:#172129; color:#b8c1c7; padding:22px 0; font-size:12px; }
+    .foot { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    @media (max-width:700px) {
+      .wrap { width:min(calc(100% - 32px),var(--max)); }
+      .head { min-height:74px; }
+      .brand img { width:42px; height:42px; }
+      .brand-name { font-size:24px; }
+      nav { gap:13px; font-size:11px; }
+      nav a:nth-child(2) { display:none; }
+      .hero { min-height:430px; }
+      .hero::before { background:linear-gradient(90deg,rgba(17,27,35,.78),rgba(17,27,35,.34)),url("assets/hero.jpg") 57% center/cover no-repeat; }
+      .hero-content { padding-block:65px; }
+      section { padding:58px 0; }
+      .service-grid { grid-template-columns:1fr; gap:10px; }
+      .service { min-height:unset; padding:19px; }
+      .info-grid,.contact-grid { grid-template-columns:1fr; gap:24px; }
+      .line-row img { width:104px; height:104px; }
+      .contact-card { min-height:unset; gap:16px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap head">
+    <a class="brand" href="#top" aria-label="t-zest トップ">
+      <img src="assets/logo.png" alt="">
+      <span><span class="brand-name">t-zest</span><br><span class="brand-sub">USED CAR SALES</span></span>
+    </a>
+    <nav aria-label="ページ内メニュー">
+      <a href="#about">t-zestについて</a>
+      <a href="#services">サービス</a>
+      <a href="#information">販売店情報</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-content">
+      <p class="eyebrow">USED CAR SALES · MATSUDO, CHIBA</p>
+      <h1>中古車販売<br>t-zest</h1>
+      <p>お車の購入からお乗り換えまで、お気軽にご相談ください。</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="tel:08041214424">電話で相談する</a>
+        <a class="btn btn-line" href="https://lin.ee/uYx1ZJo" target="_blank" rel="noopener">公式LINEで相談する</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <p class="section-label">ABOUT</p>
+      <h2>t-zestについて</h2>
+      <p class="intro">
+        t-zestでは、業者オークションより仕入れた中古車を販売しております。
+        お車のご購入やお乗り換え、下取りなど、お客様のご希望に合わせてご相談を承ります。
+      </p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <p class="section-label">SERVICES</p>
+      <h2>サービス</h2>
+      <div class="service-grid">
+        <article class="service">
+          <span class="service-no">01 / SALES</span>
+          <h3>中古車販売</h3>
+          <p>ご希望に合わせた中古車選びをご相談いただけます。</p>
+        </article>
+        <article class="service">
+          <span class="service-no">02 / CHANGE</span>
+          <h3>お乗り換え相談</h3>
+          <p>お車の乗り換えについて、お気軽にご相談ください。</p>
+        </article>
+        <article class="service">
+          <span class="service-no">03 / TRADE-IN</span>
+          <h3>下取り</h3>
+          <p>現在お乗りのお車の下取りについてもご相談を承ります。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="information">
+    <div class="wrap info-grid">
+      <div>
+        <p class="section-label">SHOP INFORMATION</p>
+        <h2>販売店情報</h2>
+        <p class="intro">千葉県松戸市を拠点に、中古車販売・お乗り換え・下取りのご相談を承っております。販売エリアは限定しておりません。</p>
+      </div>
+      <div>
+        <table class="info-table">
+          <tr><th>屋号</th><td>t-zest</td></tr>
+          <tr><th>所在地</th><td>千葉県松戸市</td></tr>
+          <tr><th>事業内容</th><td>中古車販売・お乗り換え相談・下取り</td></tr>
+          <tr><th>営業時間</th><td>不定休<br>お電話にてご確認ください</td></tr>
+          <tr><th>販売エリア</th><td>地域を限定せずご相談を承ります</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="section-label">CONTACT</p>
+      <h2>お問い合わせ</h2>
+      <p class="contact-intro">お車の購入・お乗り換え・下取りについて、お気軽にお問い合わせください。</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div>
+            <p class="contact-title">お電話でのお問い合わせ</p>
+            <a class="phone" href="tel:08041214424">080-4121-4424</a>
+            <p class="small">不定休・お電話にてご確認ください</p>
+          </div>
+          <a class="btn btn-light" style="background:#202a33;color:#fff" href="tel:08041214424">電話をかける</a>
+        </div>
+        <div class="contact-card line-card">
+          <div>
+            <p class="contact-title">公式LINE</p>
+            <div class="line-row">
+              <img src="assets/line-qr.png" alt="t-zest公式LINEの友だち追加QRコード">
+              <div>
+                <strong>LINEからもご相談いただけます</strong>
+                <p class="small">友だち追加はこちら</p>
+                <a class="line-link" href="https://lin.ee/uYx1ZJo" target="_blank" rel="noopener">公式LINEを開く →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="contact-email">FAX：047-315-1614　／　メール：<a href="mailto:contact@t-zest.net">contact@t-zest.net</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>中古車販売 t-zest｜千葉県松戸市</span>
+    <span>© t-zest</span>
+  </div>
+</footer>
+</body>
+</html>
